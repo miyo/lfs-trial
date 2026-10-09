@@ -1,0 +1,13 @@
+- `bash version-check.sh`
+  - `sudo apt install texinfo`
+- create new partition
+
+```
+ 1      1049kB  11.5MB  10.5MB  fat32                 boot, esp
+ 2      11.5MB  12.6MB  1049kB                        bios_grub
+ 3      12.6MB  537MB   524MB   ext2
+ 4      537MB   2684MB  2147MB  linux-swap(v1)        swap
+ 5      2684MB  42.9GB  40.3GB  ext4
+```
+
+- download files `bash ./scripts/download-and-check.sh ./download.list`

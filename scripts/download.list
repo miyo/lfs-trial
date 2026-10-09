@@ -1,0 +1,188 @@
+Download: https://download.savannah.gnu.org/releases/acl/acl-2.4.0.tar.xz
+MD5 sum: e289f370161698a96f50b2a3fdadf411
+Download: https://download.savannah.gnu.org/releases/attr/attr-2.6.0.tar.gz
+MD5 sum: 910a09c3ae0a211569d180586371cf7e
+Download: https://ftpmirror.gnu.org/autoconf/autoconf-2.73.tar.xz
+MD5 sum: 9cbad9a116ef845bafeed8e7bc771bf4
+Download: https://ftpmirror.gnu.org/automake/automake-1.18.1.tar.xz
+MD5 sum: cea31dbf1120f890cbf2a3032cfb9a68
+Download: https://ftpmirror.gnu.org/bash/bash-5.3.tar.gz
+MD5 sum: 977c8c0c5ae6309191e7768e28ebc951
+Download: https://github.com/gavinhoward/bc/releases/download/7.0.3/bc-7.0.3.tar.xz
+MD5 sum: ad4db5a0eb4fdbb3f6813be4b6b3da74
+Download: https://sourceware.org/pub/binutils/releases/binutils-2.47.tar.xz
+MD5 sum: d772acfbd55a81644e9fe7b8189cd2a5
+Download: https://ftpmirror.gnu.org/bison/bison-3.8.2.tar.xz
+MD5 sum: c28f119f405a2304ff0a7ccdcc629713
+Download: https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
+MD5 sum: 67e051268d0c475ea773822f7500d0e5
+Download: https://ftpmirror.gnu.org/coreutils/coreutils-9.11.tar.xz
+MD5 sum: e52e9857e4aa9ae38ef32f8ed6a27604
+Download: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+MD5 sum: 97832e6f0a260936d28536e5349c22e5
+Download: https://ftpmirror.gnu.org/dejagnu/dejagnu-1.6.3.tar.gz
+MD5 sum: 68c5208c58236eba447d7d6d1326b821
+Download: https://ftpmirror.gnu.org/diffutils/diffutils-3.12.tar.xz
+MD5 sum: d1b18b20868fb561f77861cd90b05de4
+Download: https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.4/e2fsprogs-1.47.4.tar.gz
+MD5 sum: 733a93bc688314834ff2d10530ff4dc4
+Download: https://sourceware.org/ftp/elfutils/0.195/elfutils-0.195.tar.bz2
+MD5 sum: 3e8ef51c43beceddbbb74879549cf72c
+Download: https://github.com/libexpat/libexpat/releases/download/R_2_8_3/expat-2.8.3.tar.xz
+MD5 sum: 1747f5a57b191f0373baeb5adc8078ca
+Download: https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz
+MD5 sum: 00fce8de158422f5ccd2666512329bd2
+Download: https://astron.com/pub/file/file-5.48.tar.gz
+MD5 sum: 423686e97f731d8c24e9cd1a22b03dec
+Download: https://ftpmirror.gnu.org/findutils/findutils-4.11.0.tar.xz
+MD5 sum: 512c6875ed84034dca240c4bc9380b96
+Download: https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz
+MD5 sum: 2882e3179748cc9f9c23ec593d6adc8d
+Download: https://pypi.org/packages/source/f/flit-core/flit_core-4.0.2.tar.gz
+MD5 sum: 89ebb783230fc8db6c1d2a39644b7085
+Download: https://ftpmirror.gnu.org/gawk/gawk-5.4.1.tar.xz
+MD5 sum: d379c2110e7a3e15347dd5559a41ad64
+Download: https://ftpmirror.gnu.org/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz
+MD5 sum: 19b777fb19ea4982731392481306f0d3
+Download: https://ftpmirror.gnu.org/gdbm/gdbm-1.26.tar.gz
+MD5 sum: aaa600665bc89e2febb3c7bd90679115
+Download: https://ftpmirror.gnu.org/gettext/gettext-1.0.tar.xz
+MD5 sum: dc8b2911535929cec1e263706b0a13a1
+Download: https://ftpmirror.gnu.org/glibc/glibc-2.44.tar.xz
+MD5 sum: 7677da43ef759c68e005f5d4c37986a6
+Download: https://ftpmirror.gnu.org/gmp/gmp-6.3.0.tar.xz
+MD5 sum: 956dc04e864001a9c22429f761f2c283
+Download: https://ftpmirror.gnu.org/gperf/gperf-3.3.tar.gz
+MD5 sum: 31753b021ea78a21f154bf9eecb8b079
+Download: https://ftpmirror.gnu.org/grep/grep-3.12.tar.xz
+MD5 sum: 5d9301ed9d209c4a88c8d3a6fd08b9ac
+Download: https://ftpmirror.gnu.org/groff/groff-1.24.1.tar.gz
+MD5 sum: d9d996af3d05ebab934380be708ea584
+Download: https://ftpmirror.gnu.org/grub/grub-2.14.tar.xz
+MD5 sum: 383f9effad01c235d2535357ff717543
+Download: https://ftpmirror.gnu.org/gzip/gzip-1.14.tar.xz
+MD5 sum: 4bf5a10f287501ee8e8ebe00ef62b2c2
+Download: https://github.com/Mic92/iana-etc/releases/download/20260805/iana-etc-20260805.tar.gz
+MD5 sum: f6d2619cfac3a68f91392e28fe4067c3
+Download: https://ftpmirror.gnu.org/inetutils/inetutils-2.8.tar.gz
+MD5 sum: f0f9ad13045a67da9c882148f9efae6b
+Download: https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-7.1.0.tar.xz
+MD5 sum: 4f322144fb9a0877c5f9ef71b2f11180
+Download: https://pypi.org/packages/source/J/Jinja2/jinja2-3.1.6.tar.gz
+MD5 sum: 66d4c25ff43d1deaf9637ccda523dec8
+Download: https://www.kernel.org/pub/linux/utils/kbd/kbd-2.10.0.tar.xz
+MD5 sum: 77ff950dfa4c34fdf41125547bfa831a
+Download: https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.xz
+MD5 sum: 36f2cc483745e81ede3406fa55e1065a
+Download: https://www.greenwoodsoftware.com/less/less-704.tar.gz
+MD5 sum: c4c9eea5b1862783b078c67ca67c9185
+Download: https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.78.tar.xz
+MD5 sum: 0ff11419aa4813c0a0f84fe67bf3b39e
+Download: https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz
+MD5 sum: 96fe46f2a7bb82559b35a268a2c000ba
+Download: https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.8.tar.gz
+MD5 sum: 17ac6969b2015386bcb5d278a08a40b5
+Download: https://ftpmirror.gnu.org/libtool/libtool-2.6.2.tar.xz
+MD5 sum: 87743862e6cabfb9e76651bc64e31e5c
+Download: https://github.com/besser82/libxcrypt/releases/download/v4.5.2/libxcrypt-4.5.2.tar.xz
+MD5 sum: 25e888919ddcd153a07daa95224fa436
+Download: https://www.kernel.org/pub/linux/kernel/v7.x/linux-7.1.8.tar.xz
+MD5 sum: 807584f564568b40162e9e4a72bf191f
+Download: https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz
+MD5 sum: dead9f5f1966d9ae56e1e32761e4e675
+Download: https://ftpmirror.gnu.org/m4/m4-1.4.21.tar.xz
+MD5 sum: 8051eef7239b2f187791f2ab0034d6b7
+Download: https://ftpmirror.gnu.org/make/make-4.4.1.tar.gz
+MD5 sum: c8469a3713cbbe04d955d4ae4be23eeb
+Download: https://download.savannah.gnu.org/releases/man-db/man-db-2.13.1.tar.xz
+MD5 sum: b6335533cbeac3b24cd7be31fdee8c83
+Download: https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.18.tar.xz
+MD5 sum: 44915a91e4a28161dc421636a193fb3a
+Download: https://pypi.org/packages/source/M/MarkupSafe/markupsafe-3.0.3.tar.gz
+MD5 sum: 13a73126d25afa72a1ff0daed072f5fe
+Download: https://github.com/mesonbuild/meson/releases/download/1.12.0/meson-1.12.0.tar.gz
+MD5 sum: 9f943c267d63016012efcb0f31ecdd7d
+Download: https://ftpmirror.gnu.org/mpc/mpc-1.4.1.tar.xz
+MD5 sum: 40c5fba305125279ea46041160e81daf
+Download: https://www.bytereef.org/software/mpdecimal/releases/mpdecimal-4.0.1.tar.gz
+MD5 sum: 3d4412579b1edc1047efab151889cca9
+Download: https://ftpmirror.gnu.org/mpfr/mpfr-4.2.2.tar.xz
+MD5 sum: 7c32c39b8b6e3ae85f25156228156061
+Download: https://invisible-mirror.net/archives/ncurses/ncurses-6.6.tar.gz
+MD5 sum: dd45bf6854430af403452a7a6a40652c
+Download: https://github.com/ninja-build/ninja/archive/v1.13.2/ninja-1.13.2.tar.gz
+MD5 sum: 76c00637fde44909cd7d56f8d73f2042
+Download: https://github.com/openssl/openssl/releases/download/openssl-4.0.1/openssl-4.0.1.tar.gz
+MD5 sum: 07e316afe26b61e72206b81706b497bb
+Download: https://files.pythonhosted.org/packages/source/p/packaging/packaging-26.3.tar.gz
+MD5 sum: c6809ec56986682ceffe573b8778a1ce
+Download: https://ftpmirror.gnu.org/patch/patch-2.8.tar.xz
+MD5 sum: 149327a021d41c8f88d034eab41c039f
+Download: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2
+MD5 sum: aded5840ab5a7d772dd4e16fc294b665
+Download: https://www.cpan.org/src/5.0/perl-5.44.0.tar.xz
+MD5 sum: 55761cf1543af326492fd194647796d1
+Download: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.5.tar.xz
+MD5 sum: 18c528161e6b04ae36dc981af8c4d97e
+Download: https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.7.tar.xz
+MD5 sum: d47bdda51c4bd595a1ab21b8e538bcb3
+Download: https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz
+MD5 sum: 53eae841735189a896d614cba440eb10
+Download: https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz
+MD5 sum: a4c4c2991b4126e227073c2d9445f432
+Download: https://www.python.org/ftp/python/doc/3.14.7/python-3.14.7-docs-html.tar.bz2
+MD5 sum: bdf55dddc02a76961d61730f06d18849
+Download: https://ftpmirror.gnu.org/readline/readline-8.3.tar.gz
+MD5 sum: 25a73bfb2a3ad7146c5e9d4408d9f6cd
+Download: https://ftpmirror.gnu.org/sed/sed-4.10.tar.xz
+MD5 sum: c70dc5372db95c816442ffedf77a0d0f
+Download: https://pypi.org/packages/source/s/setuptools/setuptools-84.0.0.tar.gz
+MD5 sum: c6919a4b0862ca30604559e163a6cce9
+Download: https://github.com/shadow-maint/shadow/releases/download/4.20.2/shadow-4.20.2.tar.xz
+MD5 sum: f52e717bd330818c67bd57c897ec5a8e
+Download: https://sqlite.org/2026/sqlite-autoconf-3530400.tar.gz
+MD5 sum: ee54db5a5b04e77d4883ce0c051a1eba
+Download: https://sqlite.org/2026/sqlite-doc-3530400.zip
+MD5 sum: 2cd5b168d0e5c5ae2b99beb3a4269a73
+Download: https://github.com/systemd/systemd/archive/v261.2/systemd-261.2.tar.gz
+MD5 sum: e3f04ccc83a28ec5e80c5432bb8329f5
+Download: https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-261.2.tar.xz
+MD5 sum: 4c5533c1a2d0921dd4c5b5e6b8902570
+Download: https://ftpmirror.gnu.org/tar/tar-1.35.tar.xz
+MD5 sum: a2d8042658cfd8ea939e6d911eaf4152
+Download: https://downloads.sourceforge.net/tcl/tcl8.6.18-src.tar.gz
+MD5 sum: acfe0c9f7d0c626ecf026e834a888da6
+Download: https://downloads.sourceforge.net/tcl/tcl8.6.18-html.tar.gz
+MD5 sum: 54d1ff0f5eee4e81e5cdaa4baa343397
+Download: https://ftpmirror.gnu.org/texinfo/texinfo-7.3.tar.xz
+MD5 sum: 915a09fcdfc2bf0f5ecf9e556d5698ff
+Download: https://www.iana.org/time-zones/repository/releases/tzdata2026c.tar.gz
+MD5 sum: bff7174205cefab793e3b24271ef2f45
+Download: https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.2.tar.xz
+MD5 sum: 1d70131b70abda3dec3b37e282a20c96
+Download: https://github.com/vim/vim/archive/v9.2.1025/vim-9.2.1025.tar.gz
+MD5 sum: 060c9c0d7e2bdb5e5d80daad596cae02
+Download: https://pypi.org/packages/source/w/wheel/wheel-0.48.0.tar.gz
+MD5 sum: f668e4885de814378b332eceea04a8a0
+Download: https://github.com//tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.xz
+MD5 sum: a02753f34e5546d20213b87f876a0933
+Download: https://zlib.net/fossils/zlib-1.3.2.tar.gz
+MD5 sum: a1e6c958597af3c67d162995a342138a
+Download: https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
+MD5 sum: 780fc1896922b1bc52a4e90980cdda48
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/bzip2-1.0.8-install_docs-1.patch
+MD5 sum: 6a5ac7e89b791aae556de0f745916f7f
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/coreutils-9.11-i18n-1.patch
+MD5 sum: 900d64d9936516b68613271c9ebc0059
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/expect-5.45.4-gcc15-1.patch
+MD5 sum: 0ca4d6bb8d572fbcdb13cb36cd34833e
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/glibc-2.44-upstream_fixes-1.patch
+MD5 sum: 990574184b25aa3029a2444e81865098
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/glibc-fhs-1.patch
+MD5 sum: 9a5997c3452909b1769918c759eff8a2
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/kbd-2.10.0-backspace-1.patch
+MD5 sum: f75cca16a38da6caa7d52151f7136895
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/Python-3.14.7-openssl_4-1.patch
+MD5 sum: 597d7737df1b4ea4e184c193da523050
+Download: https://www.linuxfromscratch.org/patches/lfs/13.1/tar-1.35-acl_fix-1.patch
+MD5 sum: dbab49e317105539611866dac5dd54f6
