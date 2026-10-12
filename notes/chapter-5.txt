@@ -8,3 +8,45 @@ binutils
  --disable-werror \
  --enable-new-dtags \
  --enable-default-hash-style=gnu
+
+glib
+echo "rootsbindir=/usr/sbin" > configparms
+
+../configure \
+ --prefix=/usr \
+ --host=$LFS_TGT \
+ --build=$(../scripts/config.guess) \
+ --disable-nscd \
+ libc_cv_slibdir=/usr/lib \
+ --enable-kernel=5.10
+
+make
+
+make DESTDIR=$LFS install
+
+sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd
+
+check:
+
+echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &> dummy.log
+$LFS_TGT-readelf -l a.out | grep ': /lib'
+
+
+libstdc++ (in gcc)
+
+../libstdc++-v3/configure \
+ --host=$LFS_TGT \
+ --build=$(../config.guess) \
+ CXX=$LFS_TGT-gcc \
+ --prefix=/usr \
+ --disable-multilib \
+ --disable-nls \
+ --disable-libstdcxx-pch \
+ --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/16.2.0
+
+make
+make DESTDIR=$LFS install
+
+rm -v $LFS/usr/lib/lib{stdc++{,exp,fs},supc++}.la
+
+

@@ -1,0 +1,32 @@
+mkfs.vfat /dev/sdc1
+
+mount -t vfat /dev/sdc1 /mnt/lfs/boot/efi
+
+grub-install --target=x86_64-efi --removable
+
+set default=0
+set timeout=5
+
+menuentry "LFS 13.1" {
+    insmod part_gpt
+    insmod ext2
+    set root=(hd0,gpt3)
+    linux /vmlinuz-7.1.8-lfs-13.1-systemd root=/dev/sda5 ro \
+    console=tty0 console=ttyS0,115200n8 \
+    loglevel=7 ignore_loglevel
+}
+
+cat /etc/systemd/network/10-ether0.network
+[Match]
+Name=eth0
+
+[Network]
+DHCP=yes
+
+ip link set eth0 up
+systemctl enable --now systemd-networkd
+systemctl enable --now systemd-resolved
+systemctl enable --now systemd-timesyncd
+
+uart
+\\.\pipe\lfs-serial
