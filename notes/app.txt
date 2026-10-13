@@ -1,0 +1,73 @@
+openssh
+cd /sources
+wget https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.5p1.tar.gz
+tar xf openssh-10.5p1.tar.gz
+cd openssh-10.5p1
+
+
+install -v -g sys -m700 -d /var/lib/sshd
+
+groupadd -g 50 sshd
+useradd -c 'sshd PrivSep' \
+    -d /var/lib/sshd \
+    -g sshd \
+    -s /bin/false \
+    -u 50 sshd
+
+install -v -g sys -m700 -d /var/lib/sshd
+
+groupadd -g 50 sshd
+useradd -c 'sshd PrivSep' \
+    -d /var/lib/sshd \
+    -g sshd \
+    -s /bin/false \
+    -u 50 sshd
+
+ssh-keygen -A
+
+cat > /etc/systemd/system/sshd.service <<'EOF'
+[Unit]
+Description=OpenSSH Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/sshd -D
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+/usr/sbin/sshd -t
+systemctl enable --now sshd
+
+
+PermitRootLogin yes
+PasswordAuthentication yes
+
+
+
+
+curl https://www.linuxfromscratch.org/blfs/view/13.1-systemd/basicnet/curl.html
+make-ca https://www.linuxfromscratch.org/blfs/view/stable-systemd/postlfs/make-ca.html
+ <- p11-kit https://www.linuxfromscratch.org/blfs/view/stable-systemd/postlfs/p11-kit.html
+  <- libtasn https://www.linuxfromscratch.org/blfs/view/stable-systemd/general/libtasn1.html
+
+git
+
+cd /sources
+
+wget https://www.kernel.org/pub/software/scm/git/git-2.55.0.tar.xzr
+tar xf git-2.55.0.tar.xz
+cd git-2.55.0
+
+./configure --prefix=/usr \
+    --with-gitconfig=/etc/gitconfig \
+    --with-python=python3 \
+    --with-libpcre2
+
+make NO_RUST=1 -j$(nproc)
+make NO_RUST=1 perllibdir=/usr/lib/perl5/5.44/site_perl install
