@@ -5,13 +5,9 @@ set +m
 set -x
 
 : "${LFS:?LFS environment variable is not set}"
+: "${LFS_TARGET_DISK:?LFS_TARGET_DISK environment variable is not set}"
 
-if [[ $# -ne 1 ]]; then
-    echo "Usage: $0 <disk>" >&2
-    exit 1
-fi
-
-LFS_DISK="$1"
+LFS_DISK="$LFS_TARGET_DISK"
 
 for mp in \
     "$LFS/dev/pts" \
@@ -26,8 +22,9 @@ do
     fi
 done
 
-cd $LFS
+pushd $LFS
 tar -cJpf $HOME/lfs-temp-tools-13.1-systemd.tar.xz .
+popd
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 

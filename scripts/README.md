@@ -3,9 +3,9 @@
 sudo -s
 
 export LFS=/mnt/lfs
-export LFS_TARGET_DISK=/mnt/lfs
+export LFS_TARGET_DISK=<disk>
 
-bash 02-preparing.sh /dev/sdb
+bash 02-preparing.sh 
 bash chown-dirs.sh <username>
 ```
 
@@ -33,10 +33,7 @@ Creating backup (Optional):
 ```
 exit # exit from chroot environment
 export LFS=/mnt/lfs
-bash umount-all.sh
-mount /dev
-cd $LFS
-tar -cJpf $HOME/lfs-temp-tools-13.1-systemd.tar.xz .
-bash mount-all.sh
+export LFS_TARGET_DISK=<disk>
+bash 07-backup-and-remote.sh
 bash chroot.sh
 ```
