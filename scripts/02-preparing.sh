@@ -28,3 +28,11 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 /bin/bash "$SCRIPT_DIR"/umount-all.sh
 /bin/bash "$SCRIPT_DIR"/make-partitions.sh -f "$LFS_TARGET_DISK"
 /bin/bash "$SCRIPT_DIR"/mount-all.sh "$LFS_TARGET_DISK"
+
+mkdir -pv "$LFS"/sources
+chmod -v a+wt "$LFS"/sources
+
+if ! /bin/bash "$SCRIPT_DIR/download-and-check.sh" "$SCRIPT_DIR/download.list"; then
+    echo "Download failed. Run 'bash $SCRIPT_DIR/download-and-check.sh $SCRIPT_DIR/download.list' again to retry."
+    exit 1
+fi

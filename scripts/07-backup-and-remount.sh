@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -e
+set +m
+set -x
+
+: "${LFS:?LFS environment variable is not set}"
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 <disk>" >&2
+    exit 1
+fi
+
+LFS_DISK="$1"
+
+for mp in \
+    "$LFS/dev/pts" \
+    "$LFS/dev/shm" \
+    "$LFS/dev" \
+    "$LFS/run" \
+    "$LFS/proc" \
+    "$LFS/sys"
+do
+    if mountpoint -q "$mp"; then
+        umount -v "$mp"
+    fi
+done
+
+cd $LFS
+tar -cJpf $HOME/lfs-temp-tools-13.1-systemd.tar.xz .
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+/bin/bash "$SCRIPT_DIR"/umount-all.sh
+/bin/bash "$SCRIPT_DIR"/mount-all.sh $LFS_DISK
+
