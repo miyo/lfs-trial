@@ -1,11 +1,21 @@
-umount -v $LFS/dev/pts
-mountpoint -q $LFS/dev/shm && umount -v $LFS/dev/shm
-umount -v $LFS/dev
-umount -v $LFS/run
-umount -v $LFS/proc
-umount -v $LFS/sys
+#!/bin/bash
 
-umount -v $LFS/boot/efi
-umount -v $LFS/boot
+set -e
 
-umount -v $LFS
+: "${LFS:?LFS environment variable is not set}"
+
+for mp in \
+    "$LFS/dev/pts" \
+    "$LFS/dev/shm" \
+    "$LFS/dev" \
+    "$LFS/run" \
+    "$LFS/proc" \
+    "$LFS/sys" \
+    "$LFS/boot/efi" \
+    "$LFS/boot" \
+    "$LFS"
+do
+    if mountpoint -q "$mp"; then
+        umount -v "$mp"
+    fi
+done

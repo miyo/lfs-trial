@@ -1,12 +1,33 @@
-#!/bin/sh
+#!/bin/bash
 
-: "${DISK:=sdc}"
-: "${LFS:=/mnt/lfs}"
+set -e
 
-mount -v -t ext4 "/dev/${DISK}5" "$LFS"/
-mount -v -t ext2 "/dev/${DISK}3" "$LFS"/boot
-mount -v -t vfat "/dev/${DISK}1" "$LFS"/boot/efi
-swapon --show | grep -q "^/dev/${DISK}4 " || swapon "/dev/${DISK}4"
+: "${LFS:?LFS environment variable is not set}"
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 <disk>" >&2
+    exit 1
+fi
+
+LFS_DISK="$1"
+
+if [[ "$LFS_DISK" =~ [0-9]$ ]]; then
+    PART_PREFIX="${LFS_DISK}p" # for NVMe type
+else
+    PART_PREFIX="$LFS_DISK"
+fi
+
+mkdir -p "$LFS"
+
+mount -v -t ext4 "$PART_PREFIX"5 "$LFS"/
+
+mkdir -p "$LFS"/boot
+mount -v -t ext2 "$PART_PREFIX"3 "$LFS"/boot
+
+mkdir -p "$LFS"/boot/efi
+mount -v -t vfat "$PART_PREFIX"1 "$LFS"/boot/efi
+
+mkdir -p "$LFS"/{dev,dev/pts,proc,sys,run}
 
 mount -v --bind /dev "$LFS"/dev
 mount -vt devpts devpts -o gid=5,mode=0620 "$LFS"/dev/pts
