@@ -20,6 +20,7 @@ rm -fv man3/crypt*
 make -R GIT=false prefix=/usr install
 
 popd
+rm -rf man-pages-6.18
 
 ###############################
 # Iana-Etc
@@ -30,6 +31,7 @@ pushd iana-etc-20260805
 cp -v services protocols /etc
 
 popd
+rm -rf iana-etc-20260805
 
 ###############################
 # Glibc
@@ -143,6 +145,7 @@ EOF
 mkdir -pv /etc/ld.so.conf.d
 
 popd
+rm -rf glibc-2.44
 
 ###############################
 # Zlib
@@ -159,6 +162,7 @@ make install
 rm -fv /usr/lib/libz.a
 
 popd
+rm -rf zlib-1.3.2
 
 ###############################
 # Bzip2
@@ -188,6 +192,7 @@ done
 rm -fv /usr/lib/libbz2.a
 
 popd
+rm -rf bzip2-1.0.8
 
 ###############################
 # Xz
@@ -204,6 +209,7 @@ make check
 make install
 
 popd
+rm -rf xz-5.8.3
 
 ###############################
 # Lz4
@@ -216,6 +222,7 @@ make -j1 check
 make BUILD_STATIC=no PREFIX=/usr install
 
 popd
+rm -rf lz4-1.10.0
 
 ###############################
 # Zstd
@@ -229,6 +236,7 @@ make prefix=/usr install
 rm -v /usr/lib/libzstd.a
 
 popd
+rm -rf zstd-1.5.7
 
 ###############################
 # File
@@ -242,6 +250,7 @@ make check
 make install
 
 popd
+rm -rf file-5.48
 
 ###############################
 # Readline
@@ -271,6 +280,7 @@ make install
 install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-8.3
 
 popd
+rm -rf readline-8.3
 
 ###############################
 # Pcre2
@@ -294,6 +304,7 @@ make check
 make install
 
 popd
+rm -rf pcre2-10.47
 
 ###############################
 # M4
@@ -307,6 +318,7 @@ make check
 make install
 
 popd
+rm -rf m4-1.4.21
 
 ###############################
 # Bc
@@ -320,6 +332,7 @@ make test
 make install
 
 popd
+rm -rf bc-7.0.3
 
 ###############################
 # Flex
@@ -339,6 +352,7 @@ ln -sv flex /usr/bin/lex
 ln -sv flex.1 /usr/share/man/man1/lex.1
 
 popd
+rm -rf flex-2.6.4
 
 ###############################
 # Tcl
@@ -386,6 +400,7 @@ mkdir -v -p /usr/share/doc/tcl-8.6.18
 cp -v -r ./html/* /usr/share/doc/tcl-8.6.18
 
 popd
+rm -rf tcl8.6.18-src
 
 ###############################
 # Expect
@@ -410,6 +425,7 @@ make install
 ln -svf expect5.45.4/libexpect5.45.4.so /usr/lib
 
 popd
+rm -rf expect5.45.4
 
 ###############################
 # DejaGNU
@@ -431,6 +447,7 @@ install -v -dm755 /usr/share/doc/dejagnu-1.6.3
 install -v -m644 doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-1.6.3
 
 popd
+rm -rf dejagnu-1.6.3
 
 ###############################
 # Ninja
@@ -454,6 +471,7 @@ install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninj
 install -vDm644 misc/zsh-completion /usr/share/zsh/site-functions/_ninja
 
 popd
+rm -rf ninja-1.13.2
 
 ###############################
 # Pkgconf
@@ -478,6 +496,7 @@ ln -sv pkgconf /usr/bin/pkg-config
 ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1
 
 popd
+rm -rf pkgconf-3.0.5
 
 ###############################
 # Binutils
@@ -512,6 +531,7 @@ rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \
    /usr/share/doc/gprofng/
 
 popd
+rm -rf binutils-2.47
 
 ###############################
 # GMP
@@ -536,6 +556,7 @@ make install
 make install-html
 
 popd
+rm -rf gmp-6.3.0
 
 ###############################
 # MPFR
@@ -557,6 +578,7 @@ make install
 make install-html
 
 popd
+rm -rf mpfr-4.2.2
 
 ###############################
 # MPC
@@ -577,6 +599,7 @@ make install
 make install-html
 
 popd
+rm -rf mpc-1.4.1
 
 ###############################
 # Attr
@@ -594,6 +617,7 @@ make check
 make install
 
 popd
+rm -rf attr-2.6.0
 
 ###############################
 # Acl
@@ -610,6 +634,7 @@ make check
 make install
 
 popd
+rm -rf acl-2.4.0
 
 ###############################
 # Libcap
@@ -623,6 +648,7 @@ make test
 make prefix=/usr lib=lib install
 
 popd
+rm -rf libcap-2.78
 
 ###############################
 # Libxcrypt
@@ -643,6 +669,7 @@ make check
 make install
 
 popd
+rm -rf libxcrypt-4.5.2
 
 ###############################
 # Shadow
@@ -681,9 +708,10 @@ sed -i '/MAIL/s/yes/no/' /etc/default/useradd
 
 touch /etc/sub{u,g}id
 
-passwd root
+# passwd root
 
 popd
+rm -rf shadow-4.20.2
 
 ###############################
 # Gawk
@@ -708,6 +736,7 @@ ln -sv gawk.1 /usr/share/man/man1/awk.1
 install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-5.4.1
 
 popd
+rm -rf gawk-5.4.1
 
 ###############################
 # GCC
@@ -751,9 +780,7 @@ make install
 chown -v -R root:root $(gcc -print-file-name=include){,-fixed}
 
 ln -svr /usr/bin/cpp /usr/lib
-
 ln -sv gcc.1 /usr/share/man/man1/cc.1
-
 ln -sfvr $(gcc -print-prog-name=liblto_plugin.so) /usr/lib/bfd-plugins/
 
 echo 'int main(){}' | cc -x c - -v -Wl,--verbose &> dummy.log
@@ -769,6 +796,7 @@ mkdir -pv /usr/share/gdb/auto-load/usr/lib
 mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 
 popd
+rm -rf gcc-16.2.0
 
 ###############################
 # Ncurses
@@ -804,6 +832,7 @@ ln -sfv libncursesw.so /usr/lib/libcurses.so
 cp -v -R doc -T /usr/share/doc/ncurses-6.6
 
 popd
+rm -rf ncurses-6.6
 
 ###############################
 # Sed
@@ -823,6 +852,7 @@ make install
 install -vDm644 doc/sed.html -t /usr/share/doc/sed-4.10
 
 popd
+rm -rf sed-4.10
 
 ###############################
 # Psmisc
@@ -836,6 +866,7 @@ make check
 make install
 
 popd
+rm -rf psmisc-23.7
 
 ###############################
 # Gettext
@@ -853,6 +884,7 @@ make install
 chmod -v 0755 /usr/lib/preloadable_libintl.so
 
 popd
+rm -rf gettext-1.0
 
 ###############################
 # Bison
@@ -866,6 +898,7 @@ make check
 make install
 
 popd
+rm -rf bison-3.8.2
 
 ###############################
 # Grep
@@ -880,6 +913,7 @@ make check
 make install
 
 popd
+rm -rf grep-3.12
 
 ###############################
 # Bash
@@ -909,6 +943,7 @@ make install
 exec /usr/bin/bash --login
 
 popd
+rm -rf bash-5.3
 
 ###############################
 # Libtool
@@ -917,12 +952,15 @@ tar xvf $SRC/libtool-2.6.2.tar.xz
 pushd libtool-2.6.2
 
 ./configure --prefix=/usr
+
 make
 make check
 make install
+
 rm -fv /usr/lib/libltdl.a
 
 popd
+rm -rf libtool-2.6.2
 
 ###############################
 # GDBM
@@ -939,6 +977,7 @@ make check
 make install
 
 popd
+rm -rf gdbm-1.26
 
 ###############################
 # Gperf
@@ -954,6 +993,7 @@ make check
 make install
 
 popd
+rm -rf gperf-3.3
 
 ###############################
 # Expat
@@ -971,6 +1011,7 @@ make install
 install -v -m644 doc/*.{html,css} /usr/share/doc/expat-2.8.3
 
 popd
+rm -rf expat-2.8.3
 
 ###############################
 # Inetutils
@@ -998,6 +1039,7 @@ make install
 mv -v /usr/{,s}bin/ifconfig
 
 popd
+rm -rf inetutils-2.8
 
 ###############################
 # Less
@@ -1011,6 +1053,7 @@ make check
 make install
 
 popd
+rm -rf less-704
 
 ###############################
 # Perl
@@ -1042,6 +1085,7 @@ make install
 unset BUILD_ZLIB BUILD_BZIP2
 
 popd
+rm -rf perl-5.44.0
 
 ###############################
 # Autoconf
@@ -1056,6 +1100,7 @@ make check
 make install
 
 popd
+rm -rf autoconf-2.73
 
 ###############################
 # Automake
@@ -1071,6 +1116,7 @@ make -j$(($(nproc)>4?$(nproc):4)) check
 make install
 
 popd
+rm -rf automake-1.18.1
 
 ###############################
 # OpenSSL
@@ -1091,6 +1137,7 @@ mv -v /usr/share/doc/openssl /usr/share/doc/openssl-4.0.1
 cp -vfr doc/* /usr/share/doc/openssl-4.0.1
 
 popd
+rm -rf openssl-4.0.1
 
 ###############################
 # Libelf (from Elfutils)
@@ -1112,6 +1159,7 @@ install -vm644 config/libelf.pc /usr/lib/pkgconfig
 rm /usr/lib/libelf.a
 
 popd
+rm -rf elfutils-0.195
 
 ###############################
 # Libffi
@@ -1128,6 +1176,7 @@ make check
 make install
 
 popd
+rm -rf libffi-3.8.0
 
 ###############################
 # Sqlite
@@ -1150,6 +1199,7 @@ make install
 cp -v -R sqlite-doc-3530400 -T /usr/share/doc/sqlite-3.53.4
 
 popd
+rm -rf sqlite-autoconf-3530400
 
 ###############################
 # mpdecimal
@@ -1166,6 +1216,7 @@ make check_local
 make install
 
 popd
+rm -rf mpdecimal-4.0.1
 
 ###############################
 # Python
@@ -1200,6 +1251,7 @@ tar --strip-components=1 \
     -xvf $SRC/python-3.14.7-docs-html.tar.bz2
 
 popd
+rm -rf Python-3.14.7
 
 ###############################
 # Flit-Core
@@ -1211,6 +1263,7 @@ pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist flit_core
 
 popd
+rm -rf flit_core-4.0.2
 
 ###############################
 # Packaging
@@ -1222,6 +1275,7 @@ pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist packaging
 
 popd
+rm -rf packaging-26.3
 
 ###############################
 # Wheel
@@ -1233,6 +1287,7 @@ pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist wheel
 
 popd
+rm -rf wheel-0.48.0
 
 ###############################
 # Setuptools
@@ -1244,6 +1299,7 @@ pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist setuptools
 
 popd
+rm -rf setuptools-84.0.0
 
 ###############################
 # Meson
@@ -1258,6 +1314,7 @@ install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/com
 install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson
 
 popd
+rm -rf meson-1.12.0
 
 ###############################
 # Kmod
@@ -1276,6 +1333,7 @@ ninja
 ninja install
 
 popd
+rm -rf kmod-34.2
 
 ###############################
 # Coreutils
@@ -1305,6 +1363,7 @@ mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
 sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
 
 popd
+rm -rf coreutils-9.11
 
 ###############################
 # Diffutils
@@ -1319,6 +1378,7 @@ make check
 make install
 
 popd
+rm -rf diffutils-3.12
 
 ###############################
 # Findutils
@@ -1337,6 +1397,7 @@ su tester -c "PATH=$PATH make check -k"
 make install
 
 popd
+rm -rf findutils-4.11.0
 
 ###############################
 # Groff
@@ -1351,6 +1412,7 @@ make check
 make install
 
 popd
+rm -rf groff-1.24.1
 
 ###############################
 # GRUB
@@ -1371,6 +1433,7 @@ make
 make install
 
 popd
+rm -rf grub-2.14
 
 ###############################
 # Gzip
@@ -1385,6 +1448,7 @@ make check
 make install
 
 popd
+rm -rf gzip-1.14
 
 ###############################
 # IPRoute2
@@ -1401,6 +1465,7 @@ make SBINDIR=/usr/sbin install
 install -vDm644 COPYING README* -t /usr/share/doc/iproute2-7.1.0
 
 popd
+rm -rf iproute2-7.1.0
 
 ###############################
 # Kbd
@@ -1422,6 +1487,7 @@ make install
 cp -R -v docs/doc -T /usr/share/doc/kbd-2.10.0
 
 popd
+rm -rf kbd-2.10.0
 
 ###############################
 # Libpipeline
@@ -1435,6 +1501,7 @@ make
 make install
 
 popd
+rm -rf libpipeline-1.5.8
 
 ###############################
 # Make
@@ -1450,6 +1517,7 @@ su tester -c "PATH=$PATH make check"
 make install
 
 popd
+rm -rf make-4.4.1
 
 ###############################
 # Patch
@@ -1464,6 +1532,7 @@ make check
 make install
 
 popd
+rm -rf patch-2.8
 
 ###############################
 # Tar
@@ -1483,6 +1552,7 @@ make install
 make -C doc install-html docdir=/usr/share/doc/tar-1.35
 
 popd
+rm -rf tar-1.35
 
 ###############################
 # Texinfo
@@ -1506,6 +1576,7 @@ pushd /usr/share/info
 popd
 
 popd
+rm -rf texinfo-7.3
 
 ###############################
 # Vim
@@ -1552,6 +1623,7 @@ EOF
 # vim -c ':options'
 
 popd
+rm -rf vim-9.2.1025
 
 ###############################
 # MarkupSafe
@@ -1563,6 +1635,7 @@ pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist Markupsafe
 
 popd
+rm -rf markupsafe-3.0.3
 
 ###############################
 # Jinja2
@@ -1574,6 +1647,7 @@ pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist Jinja2
 
 popd
+rm -rf jinja2-3.1.6
 
 ###############################
 # Systemd
@@ -1623,6 +1697,7 @@ systemd-machine-id-setup
 systemctl preset-all
 
 popd
+rm -rf systemd-261.2
 
 ###############################
 # D-Bus
@@ -1645,6 +1720,7 @@ ninja install
 ln -sfv /etc/machine-id /var/lib/dbus
 
 popd
+rm -rf dbus-1.16.2
 
 ###############################
 # Man-DB
@@ -1666,6 +1742,7 @@ make check
 make install
 
 popd
+rm -rf man-db-2.13.1
 
 ###############################
 # Procps-ng
@@ -1688,6 +1765,7 @@ su tester -c "PATH=$PATH make check"
 make install
 
 popd
+rm -rf procps-ng-4.0.7
 
 ###############################
 # Util-linux
@@ -1720,6 +1798,7 @@ su tester -c "make -k check"
 make install
 
 popd
+rm -rf util-linux-2.42.2
 
 ###############################
 # E2fsprogs
@@ -1755,6 +1834,7 @@ install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info
 sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf
 
 popd
+rm -rf e2fsprogs-1.47.4
 
 ###############################
 # Stripping
