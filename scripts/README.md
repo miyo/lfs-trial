@@ -34,6 +34,14 @@ Creating backup (Optional):
 exit # exit from chroot environment
 export LFS=/mnt/lfs
 export LFS_TARGET_DISK=<disk>
-bash 07-backup-and-remote.sh
+bash 07-backup-and-remount.sh
 bash chroot.sh
+```
+
+```
+bash restore-backup.sh /dev/sdb <backupfile>
+```
+
+```
+bash 08-build-lfs-system.sh
 ```

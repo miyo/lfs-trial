@@ -11,6 +11,14 @@ MY_TIMEZONE=Asia/Tokyo
 cd $BASE
 
 ###############################
+# Create a user for test
+###############################
+echo "tester:x:101:101::/home/tester:/bin/bash" >> /etc/passwd
+echo "tester:x:101:" >> /etc/group
+install -o tester -d /home/tester
+
+
+###############################
 # Man-pages
 ###############################
 tar xvf $SRC/man-pages-6.18.tar.xz
@@ -1903,7 +1911,14 @@ unset BIN LIB save_usrlib online_usrbin online_usrlib
 
 rm -rf /tmp/{*,.*}
 
-find /usr/lib /usr/libexec -name \*.la -delete
+###############################
+# Cleaning
+###############################
 
+find /usr/lib /usr/libexec -name \*.la -delete
 find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
+
+###############################
+# Delete a user for test
+###############################
 userdel -r tester
