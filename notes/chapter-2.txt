@@ -1,3 +1,7 @@
+# Preparing the Host System
+
+## version check
+
 - `bash version-check.sh`
   - `sudo apt install texinfo`
 - create new partition
