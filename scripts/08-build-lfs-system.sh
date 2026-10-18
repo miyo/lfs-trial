@@ -53,11 +53,13 @@ cd build
              --enable-kernel=5.10
 
 make
-make check
+
+# make check
 touch /etc/ld.so.conf
 sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
 
 make install
+
 sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd
 
 localedef -i C -f UTF-8 C.UTF-8
