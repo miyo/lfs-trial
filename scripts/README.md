@@ -1,5 +1,9 @@
 # Building LFS with Scripts
 
+These scripts are provided as-is, without any warranty. Use them at your own risk.
+
+Warning: Some scripts modify disk partitions and filesystems, potentially resulting in data loss.
+
 ## Prapare the Build Environment
 
 Run the following commands as root:
