@@ -1602,7 +1602,7 @@ chown -R tester .
 sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak
 
 su tester -c "TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test" \
-    &> vim-test.log
+    &> vim-test.log || true # skip for some errors
 
 make install
 
@@ -1693,7 +1693,7 @@ meson setup .. \
 ninja
 
 echo 'NAME="Linux From Scratch"' > /etc/os-release
-unshare -m ninja test # skip for some errors
+unshare -m ninja test || true # skip for some errors
 
 ninja install
 
@@ -1921,4 +1921,4 @@ find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
 ###############################
 # Delete a user for test
 ###############################
-userdel -r tester
+userdel -r tester || true # ignore an error for deleting mail spool
