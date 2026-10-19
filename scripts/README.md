@@ -44,4 +44,16 @@ bash restore-backup.sh /dev/sdb <backupfile>
 
 ```
 bash 08-build-lfs-system.sh
+passwd root
+bash 08-build-lfs-system.sh
+bash 09-system-config.sh 
+bash 10-lfs-system-bootable.sh
+bash 20-install-openssh.sh
 ```
+
+```
+bash 20-optional-apps.sh
+bash 21-install-pkgsrc.sh
+```
+
+

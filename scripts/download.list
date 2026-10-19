@@ -186,3 +186,21 @@ Download: https://www.linuxfromscratch.org/patches/lfs/13.1/Python-3.14.7-openss
 MD5 sum: 597d7737df1b4ea4e184c193da523050
 Download: https://www.linuxfromscratch.org/patches/lfs/13.1/tar-1.35-acl_fix-1.patch
 MD5 sum: dbab49e317105539611866dac5dd54f6
+Download: https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.5p1.tar.gz
+MD5 sum: a95119f402dfa0166c9dd1237239085c
+Download: https://www.kernel.org/pub/software/scm/git/git-2.55.0.tar.xz
+MD5 sum: 758c02a1b621cc0868ee0a0d99573e6b
+Download: https://curl.se/download/curl-8.21.0.tar.xz
+MD5 sum: 230131079987135cbe1eadb77a04af57
+Download: https://github.com/lfs-book/make-ca/archive/v1.16.1/make-ca-1.16.1.tar.gz
+MD5 sum: bf9cea2d24fc5344d4951b49f275c595
+Download: https://github.com/p11-glue/p11-kit/releases/download/0.26.5/p11-kit-0.26.5.tar.xz
+MD5 sum: 308306e889850bff08fae74ae7897a21
+Download: https://ftpmirror.gnu.org/libtasn1/libtasn1-4.21.0.tar.gz
+MD5 sum: 2ee1d9f3aa66f1e308c46a283aa9a8c2
+Download: https://github.com/rockdaboot/libpsl/releases/download/0.23.3/libpsl-0.23.3.tar.gz
+MD5 sum: 596df43f3c2a8f1d4a677b032ccbc820
+Download: https://github.com/nghttp2/nghttp2/releases/download/v1.70.0/nghttp2-1.70.0.tar.xz
+MD5 sum: 3df2b4b51caa13b76032bfd2d11d4ab2
+
+

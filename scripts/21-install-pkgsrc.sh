@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+cd /usr
+git clone -b lfs https://github.com/miyo/pkgsrc.git
+
+cd /usr/pkgsrc/bootstrap
+
+./bootstrap \
+    --prefix=/usr/pkg \
+    --pkgdbdir=/usr/pkg/pkgdb \
+    --sysconfdir=/usr/pkg/etc \
+    --varbase=/var
+
+
+export PATH=/usr/pkg/bin:/usr/pkg/sbin:$PATH
+
+cd /usr/pkgsrc/sysutils/tree
+bmake install
+bmake clean
